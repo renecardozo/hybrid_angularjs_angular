@@ -1,0 +1,43 @@
+{
+  "name": "hybrid-spike",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run watch\" \"npm run serve\"",
+    "watch": "tsc -w",
+    "serve": "lite-server",
+    "tsc": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "~4.0.0",
+    "@angular/compiler": "~4.0.0",
+    "@angular/core": "~4.0.0",
+    "@angular/forms": "~4.0.0",
+    "@angular/http": "~4.0.0",
+    "@angular/platform-browser": "~4.0.0",
+    "@angular/platform-browser-dynamic": "~4.0.0",
+    "@angular/router": "~4.0.0",
+    "@angular/upgrade": "^4.2.4",
+    "@types/angular": "^1.6.25",
+    "angular": "^1.5.8",
+    "angular-in-memory-web-api": "~0.3.0",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.1",
+    "systemjs": "0.19.40",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.2.0",
+    "lite-server": "^2.2.2",
+    "typescript": "~2.1.0",
+    "canonical-path": "0.0.2",
+    "tslint": "^3.15.1",
+    "lodash": "^4.16.4",
+    "@types/node": "^6.0.46",
+    "@types/jasmine": "2.5.36"
+  }
+}
