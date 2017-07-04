@@ -5,10 +5,19 @@
     <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="angularjs-app/components/menu/menu.component.css" rel="stylesheet">
     <!--<link rel="stylesheet" href="styles.css">-->
     <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="angularjs-app/app.js"></script>
-    <script src="angularjs-app/components/my.component.js"></script>
+    <script src="angularjs-app/components/menu/menu.component.js"></script>
+    <script src="angularjs-app/components/custom/custom.component.js"></script>
+    <script src="angularjs-app/components/exported/exported.component.js"></script>
+    <script src="angularjs-app/components/mixed/mixed.component.js"></script>
+
+    <script src="angularjs-app/components/custom/custom.route.js"></script>
+    <script src="angularjs-app/components/exported/exported.route.js"></script>
+    <script src="angularjs-app/components/mixed/mixed.route.js"></script>
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
 
@@ -18,14 +27,13 @@
     <script src="systemjs.config.js"></script>
     <script>
     //   System.import('main.js').catch(function(err){ console.error(err); });
-    System.import('app').catch(function (err) {
+    System.import('angularjs-app/angular4-components/main.js').catch(function (err) {
       console.error(err);
     });
     </script>
   </head>
   <body>
     <!--<h2>Setting up my development environment</h2>-->
-    <app-component>Loading...</app-component>
-    <my-component></my-component>
+    <menu-component></menu-component>
   </body>
 </html>

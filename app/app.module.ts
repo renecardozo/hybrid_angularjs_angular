@@ -1,7 +1,9 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { downgradeComponent, UpgradeModule } from '@angular/upgrade/static';
 import { AppComponent }  from './app.component';
+import { RepoComponent } from './components/repo/repo.component';
 import * as _angular_ from 'angular';
 
 declare global {
@@ -9,12 +11,18 @@ declare global {
 }
 
 @NgModule({
-  imports:      [ BrowserModule,UpgradeModule ],
+  imports:      [ 
+    BrowserModule,
+    UpgradeModule,
+    HttpModule 
+  ],
   declarations: [
-    AppComponent
+    AppComponent,
+    RepoComponent
   ],
   entryComponents: [
-    AppComponent
+    AppComponent,
+    RepoComponent
   ]
 })
 
@@ -32,4 +40,9 @@ angular.module('myApp')
   .directive(
     'appComponent',
     downgradeComponent({ component: AppComponent }) as angular.IDirectiveFactory
+  )
+  .directive(
+    'repoComponent',
+    downgradeComponent({component: RepoComponent}) as angular.IDirectiveFactory
   );
+  

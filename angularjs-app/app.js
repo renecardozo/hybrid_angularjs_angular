@@ -1,3 +1,5 @@
-'use strict';
-angular.module('myApp',[]);
-angular.bootstrap(document.body, ['myApp'], { strictDi: true });
+(function (){
+    'use strict';
+    angular.module('myApp',['ui.router']);
+    angular.bootstrap(document.body, ['myApp'], { strictDi: true });
+})();

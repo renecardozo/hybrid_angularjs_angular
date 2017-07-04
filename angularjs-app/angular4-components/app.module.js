@@ -10,8 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var http_1 = require("@angular/http");
 var static_1 = require("@angular/upgrade/static");
 var app_component_1 = require("./app.component");
+var repo_component_1 = require("./components/repo/repo.component");
 var AppModule = (function () {
     function AppModule(upgrade) {
         this.upgrade = upgrade;
@@ -23,12 +25,18 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, static_1.UpgradeModule],
+        imports: [
+            platform_browser_1.BrowserModule,
+            static_1.UpgradeModule,
+            http_1.HttpModule
+        ],
         declarations: [
-            app_component_1.AppComponent
+            app_component_1.AppComponent,
+            repo_component_1.RepoComponent
         ],
         entryComponents: [
-            app_component_1.AppComponent
+            app_component_1.AppComponent,
+            repo_component_1.RepoComponent
         ]
     }),
     __metadata("design:paramtypes", [static_1.UpgradeModule])
@@ -38,5 +46,6 @@ exports.AppModule = AppModule;
  * Downgrading component
  */
 angular.module('myApp')
-    .directive('appComponent', static_1.downgradeComponent({ component: app_component_1.AppComponent }));
+    .directive('appComponent', static_1.downgradeComponent({ component: app_component_1.AppComponent }))
+    .directive('repoComponent', static_1.downgradeComponent({ component: repo_component_1.RepoComponent }));
 //# sourceMappingURL=app.module.js.map

@@ -1,0 +1,16 @@
+<h2>Repos from GitHub</h2>
+
+<table>
+  <tr>
+    <th>Avatar</th>
+    <th>Login</th>
+    <th>User Type</th>
+    <th>GitHub</th>
+  </tr>
+  <tr *ngFor="let repo of repos">
+    <td><img class="img-avatar" [src]=repo.avatar_url/></td>
+    <td>{{repo.login}}</td>
+    <td>{{repo.type}}</td>
+    <td>{{repo.html_url}}</td>
+  </tr>
+</table>
